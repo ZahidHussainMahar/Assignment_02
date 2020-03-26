@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FirstName: MyString
+  LastName: MyString
+  Gender: MyString
+  HiredDate: 2020-03-25
+  Salary: 1
+
+two:
+  FirstName: MyString
+  LastName: MyString
+  Gender: MyString
+  HiredDate: 2020-03-25
+  Salary: 1

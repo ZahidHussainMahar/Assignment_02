@@ -1,0 +1,76 @@
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col">
+                        <div class="profile-head p-5">
+                                    <h2>
+                                        <%= @employee.FirstName %> <%= @employee.LastName %>
+                                    </h2>
+                                    
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>Employee Id</label>
+                                            </div>
+                                            <div class="col">
+                                                <p><%= @employee.id %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>First Name</label>
+                                            </div>
+                                            <div class="col">
+                                                <p><%= @employee.FirstName %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>Last Name</label>
+                                            </div>
+                                            <div class="col">
+                                                <p><%= @employee.LastName %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>Gender</label>
+                                            </div>
+                                            <div class="col">
+                                                <p><%= @employee.Gender %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>HiredDate</label>
+                                            </div>
+                                            <div class="col">
+                                                <p><%= @employee.HiredDate %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>Salary</label>
+                                            </div>
+                                            <div class="col">
+                                                <p><%= @employee.Salary %></p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="row">
+                            	<div class="col">
+                        <button type="button" class="btn btn-light"><%= link_to "Edit", edit_employee_path(@employee) %></button>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+                            

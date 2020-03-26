@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 style="text-align: center;">Employees</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Hired Date</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @employees.each do |employee|%>
+            <tr>
+                <th scope="row">
+                    <%= employee.id %>
+                </th>
+                <td>
+                    <%= employee.FirstName %>
+                </td>
+                <td>
+                    <%= employee.LastName %>
+                </td>
+                <td>
+                    <%= employee.Gender %>
+                </td>
+                <td>
+                    <%= employee.HiredDate %>
+                </td>
+                <td>
+                    <%= employee.Salary %>
+                </td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-light"><%= link_to "view", employee_path(employee.id) %></button>
+                        <button type="button" class="btn btn-light"><%= link_to "Edit", edit_employee_path(employee.id) %></button>
+                        <button type="button" class="btn btn-light"><%= link_to "Delete", employee_path(employee.id), method: :delete, data: { confirm: "Are You Sure"} %></button>
+                    </div>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-light btn-lg btn-block"><%= link_to "Add Employee", new_employee_path %></button>
+</div>
